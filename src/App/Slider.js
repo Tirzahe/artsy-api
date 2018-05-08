@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getArt, getNextPage } from '../redux/artwork';
+import { getToken, getNextPage } from '../redux/artwork';
 
 
 class Slider extends Component {
@@ -11,13 +11,12 @@ class Slider extends Component {
         }
     }
     componentDidMount() {
-        this.props.getArt();
+        this.props.getToken();
     }
     selectNextImg = (e) => {
         e.preventDefault();
         const { artData } = this.props.state;
         if (this.props.state.nextPage) {
-            console.log("What is this URI", this.props.state.nextPage);
             this.props.getNextPage(this.props.state.nextPage);
             this.setState(prevState => ({ curr: prevState.curr + 1 > artData.length - 1 ? 0 : prevState.curr + 1 }));
         } else {
@@ -32,7 +31,6 @@ class Slider extends Component {
     }
 
     render() {
-        // console.log(this.props);
         const { loading } = this.props.state;
         if (loading) {
             return <div>
@@ -42,7 +40,6 @@ class Slider extends Component {
                 <h4 className="loading-quote"> "All the art of living lies in a fine mingling of letting go and holding on." -Havelock Ellis</h4>
                 </div>
         }
-        console.log('art state', this.state);
         const { curr } = this.state;
         const { artData } = this.props.state;
         const image = artData[curr];
@@ -69,4 +66,4 @@ const mapToStateToProps = (state) => {
     }
 }
 
-export default connect(mapToStateToProps, { getArt, getNextPage })(Slider);
+export default connect(mapToStateToProps, { getToken, getNextPage })(Slider);
