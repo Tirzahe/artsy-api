@@ -26,10 +26,16 @@ a:hover{
 }
 .homepage {
     text-align: center;
-    margin: 15px;
+    margin: 35px;
     border: 1px solid #6B5E62;
     border-radius: 5px;
     padding: 10px;
+}
+.homeImg {
+    margin-bottom: 10px;
+}
+img{
+    width: 100%;
 }
 button {
     background-color: #EFEFF0;
@@ -43,23 +49,21 @@ button {
     margin-bottom: 35px;
     text-emphasis: wrap;
     font-family: 'Quicksand', sans-serif;
-    
+    width: 100%;
 }
 .image-text {
     padding-left: 20px;
     margin-bottom: 5px;
-    width: 185px;
+    width: 100%;
 }
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 100%;
     background-color: #6B5E62;
     color: #EFEFF0;
     text-align: center;
     padding: 5px 0;
     border-radius: 5px;
- 
-    position: absolute;
     z-index: 1;
     opacity: 0;
     transition: opacity 2s;

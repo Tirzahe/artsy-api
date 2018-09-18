@@ -34,10 +34,8 @@ class Slider extends Component {
         const { loading } = this.props.state;
         if (loading) {
             return <div>
-                <h2 className="loading-head">...loading</h2>
-                <p className="loading">If "loading..." continues for more than a few seconds, It's likely the API Token has expired.</p>
-                <p className="loading">Please accept our sincere apologies, here's a piece of written art to ease the misadventure: </p>
-                <h4 className="loading-quote"> "All the art of living lies in a fine mingling of letting go and holding on." -Havelock Ellis</h4>
+                <h2 className="loading-head">... loading ...</h2>
+                <h3 className="loading-quote"> "All the art of living lies in a fine mingling of letting go and holding on." -Havelock Ellis</h3>
                 </div>
         }
         const { curr } = this.state;

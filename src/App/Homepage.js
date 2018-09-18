@@ -1,13 +1,11 @@
 import React from 'react'
+import image from '../img/Woman with Yellow Hair (Femme aux cheveux jaunes), Pablo Picasso - Artsy.net.png'
 
 function Homepage(){
     return(
         <div className='homepage'>
-            <h3>Tribute to Art</h3>
-            <p>Press the Gallary link above to get to our collection and then use the arrow buttons to navigate through the art pieces. <br/>Press 'Home' link above to return here. </p>
-            {/* <p>To browse by artist, click the 'Artist' link above.</p> */}
-            <p><br/>All art here has been curated through the <a href="https://www.artsy.net" target="blank">artsy.net</a> API and is subject to copywright.</p>
-            
+            <p><img src={ image } alt="Woman with Yellow hair by Pablo Picasso"/>
+            <br/>All art here has been curated through the <a href="https://www.artsy.net" target="blank">artsy.net</a> API and is subject to copywright.</p>
         </div>
     )
 }
