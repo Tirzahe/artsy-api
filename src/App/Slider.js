@@ -34,7 +34,7 @@ class Slider extends Component {
         const { loading } = this.props.state;
         if (loading) {
             return <div>
-                <h2 className="loading-head">... loading ...</h2>
+                <h2 className="loading-head">Loading ...</h2>
                 <h3 className="loading-quote"> "All the art of living lies in a fine mingling of letting go and holding on." -Havelock Ellis</h3>
                 </div>
         }
@@ -44,9 +44,9 @@ class Slider extends Component {
         return (
             <div className="slider">
                 <button onClick={this.selectPrevImg} className="left"></button>
-                <div className="image">
-                    <div className="tooltip">
-                        <img src={image._links.thumbnail.href} alt={image.slug} className="tooltip" /><span className="tooltiptext">{image.slug}</span>
+                <div className="wrapper">
+                    <div className="image">
+                        <img src={image._links.thumbnail.href} alt={image.slug} className="img"/> {/*<span className="tooltiptext">{image.slug}</span>*/}
                     </div>
                     <p className="image-text">Title: {image.title}</p>
                     <p className="image-text">Year: {image.date}</p>
