@@ -36,21 +36,24 @@ a:hover{
 }
 .wrapper{
     width: 80%;
+    margin-bottom: 20px;
 }
 button {
     background-color: #EFEFF0;
     border-radius: 5px;
-    margin-bottom: 60px;
+    margin-bottom: 83px;
 }
 .img{
     border: 14px groove #22333B;
     margin-bottom: 15px;
-    text-emphasis: wrap;
-    font-family: 'Quicksand', sans-serif;
-    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     max-height: 100vh;
 }
 .image-text {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
     padding-left: 20px;
     margin-bottom: 5px;
     width: 100%;
@@ -68,7 +71,7 @@ button {
     transition: 2s;
 }
 
-.image:hover .tooltiptext {
+.img:hover .tooltiptext {
     visibility: visible;
     opacity: .7;
 } */
